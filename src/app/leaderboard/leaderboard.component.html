@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Position</th>
+      <th>Player</th>
+      <th>ELO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of players; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ player.username }}</td>
+      <td>{{ player.elo }}</td>
+    </tr>
+  </tbody>
+</table>

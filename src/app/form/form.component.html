@@ -1,0 +1,26 @@
+<div>
+    <label for="winner1">Winner 1</label>
+    <select id="winner1" [(ngModel)]="winner1">
+      <option *ngFor="let item of players" [ngValue]="{ id: item.id, elo: item.elo}">{{ item.username }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="winner2">Winner 2</label>
+    <select id="winner2" [(ngModel)]="winner2">
+        <option *ngFor="let item of players" [ngValue]="{ id: item.id, elo: item.elo}">{{ item.username }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="loser1">Loser 1</label>
+    <select id="loser1" [(ngModel)]="loser1">
+        <option *ngFor="let item of players" [ngValue]="{ id: item.id, elo: item.elo}">{{ item.username }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="loser2">Loser 2</label>
+    <select id="loser2" [(ngModel)]="loser2">
+        <option *ngFor="let item of players" [ngValue]="{ id: item.id, elo: item.elo}">{{ item.username }}</option>
+    </select>
+  </div>
+  <button (click)="saveEntries()">Save</button>
+  
